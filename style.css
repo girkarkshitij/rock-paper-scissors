@@ -1,0 +1,61 @@
+:root {
+    --gray: #282828;
+    --dark-blue: #0c0032;
+    --medium-blue: #190061;
+    --light-blue-2: #240090;
+    --light-blue-1: #3500d3;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.5rem;
+    color: white;
+    background: black;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: var(--light-blue-1);
+    margin: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.scoreboard {
+    background: var(--gray);
+    padding: 30px;
+    display: flex;
+}
+
+.scoreboard p {
+    margin: auto;
+}
+
+.choices {
+    display: flex;
+    background: var(--medium-blue);
+    font-size: 60px;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.choices a {
+    color: white;
+}
+
+.choices a:hover {
+    color: aqua;
+}
+
+/* modal */
+/* .modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1010;
+} */
