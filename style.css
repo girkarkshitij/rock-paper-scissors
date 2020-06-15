@@ -24,6 +24,7 @@ body {
     margin: 30px;
     padding: 50px;
     text-align: center;
+    border-radius: 10px;
 }
 
 .scoreboard {
@@ -42,6 +43,7 @@ body {
     font-size: 100px;
     justify-content: space-evenly;
     padding: 50px;
+    border-radius: 10px;
 }
 
 .choices a {
@@ -86,6 +88,7 @@ body {
     margin-top: 70px;
     overflow: visible;
     text-transform: none;
+    border-radius: 5px;
 }
 
 #close-btn:hover {
