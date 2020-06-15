@@ -8,6 +8,10 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
+            rel="stylesheet"
+        />
         <script
             src="https://kit.fontawesome.com/0f8875ff78.js"
             crossorigin="anonymous"
@@ -33,12 +37,14 @@
                 ></a>
             </div>
         </div>
-        <div class="modal">
+        <div class="modal" id="modal">
             <h1>You Won</h1>
             <a href="#" class="rock" class="choice"
                 ><i class="far fa-hand-rock"></i
             ></a>
+            <button type="button" id="close-btn">Close</button>
         </div>
+        <div class="modal-overlay"></div>
         <script src="app.js"></script>
     </body>
 </html>
