@@ -1,3 +1,17 @@
+// Scoreboard
+let scoreboard = {
+    player: 0,
+    computer: 0,
+};
+
+function displayScoreboard() {
+    const container = document.querySelector('#scoreboard');
+    container.innerHTML = `
+        <p>Player ${scoreboard.player}</p>
+        <p>Computer ${scoreboard.computer}</p>
+    `;
+}
+
 // Close the modal
 const modal = document.querySelector('#modal');
 const closeButton = document.querySelector('#close-btn');
@@ -9,6 +23,7 @@ choicesArray.forEach((item) =>
     item.addEventListener('click', () => play(item.id))
 );
 
+// Game
 function play(playerChoice) {
     let computerChoice;
     switch (getRandomInt()) {
@@ -25,6 +40,7 @@ function play(playerChoice) {
     const finalWinner = decideWinner(playerChoice, computerChoice);
     displayWinner(finalWinner, computerChoice);
     modal.classList.toggle('open');
+    displayScoreboard();
 }
 
 function displayWinner(status, computerChoice) {
@@ -35,21 +51,23 @@ function displayWinner(status, computerChoice) {
         <a href="#" id="${computerChoice}" class="choice"
         ><i class="far fa-hand-${computerChoice}"></i
         ></a>
-    `;
+        `;
     } else if (status === 'player') {
         modalContainer.innerHTML = `
         <h1>You Win!</h1>
         <a href="#" id="${computerChoice}" class="choice"
         ><i class="far fa-hand-${computerChoice}"></i
         ></a>
-    `;
+        `;
+        scoreboard.player++;
     } else {
         modalContainer.innerHTML = `
         <h1>You Lose!</h1>
         <a href="#" id="${computerChoice}" class="choice"
         ><i class="far fa-hand-${computerChoice}"></i
         ></a>
-    `;
+        `;
+        scoreboard.computer++;
     }
 }
 
