@@ -23,18 +23,35 @@ function play(playerChoice) {
             break;
     }
     const finalWinner = decideWinner(playerChoice, computerChoice);
-    console.log(finalWinner);
+    displayWinner(finalWinner, computerChoice);
     modal.classList.toggle('open');
 }
 
-// function displayWinner(status) {
-//     if (status === 'draw') {
-//     } else if (status === 'player') {
-//     } else {
-//     }
-//     //open the modal
-//     modal.classList.toggle('open');
-// }
+function displayWinner(status, computerChoice) {
+    const modalContainer = document.querySelector('#modal-container');
+    if (status === 'draw') {
+        modalContainer.innerHTML = `
+        <h1>Draw!</h1>
+        <a href="#" id="${computerChoice}" class="choice"
+        ><i class="far fa-hand-${computerChoice}"></i
+        ></a>
+    `;
+    } else if (status === 'player') {
+        modalContainer.innerHTML = `
+        <h1>You Win!</h1>
+        <a href="#" id="${computerChoice}" class="choice"
+        ><i class="far fa-hand-${computerChoice}"></i
+        ></a>
+    `;
+    } else {
+        modalContainer.innerHTML = `
+        <h1>You Lose!</h1>
+        <a href="#" id="${computerChoice}" class="choice"
+        ><i class="far fa-hand-${computerChoice}"></i
+        ></a>
+    `;
+    }
+}
 
 function decideWinner(player, computer) {
     if (player === computer) return 'draw';

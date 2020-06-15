@@ -22,7 +22,7 @@ body {
 .container {
     background: var(--light-blue-1);
     margin: 30px;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
 }
 
@@ -39,9 +39,9 @@ body {
 .choices {
     display: flex;
     background: var(--medium-blue);
-    font-size: 60px;
+    font-size: 100px;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 50px;
 }
 
 .choices a {
@@ -68,9 +68,26 @@ body {
 
 .modal a {
     display: block;
+    color: white;
     font-size: 100px;
 }
 
 .modal.open {
     display: block;
+}
+
+#close-btn {
+    background: black;
+    color: white;
+    font-family: inherit;
+    font-size: 100%;
+    border: none;
+    line-height: 1.15;
+    margin-top: 70px;
+    overflow: visible;
+    text-transform: none;
+}
+
+#close-btn:hover {
+    border: 2px solid aqua;
 }
