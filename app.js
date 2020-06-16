@@ -14,9 +14,13 @@ function displayScoreboard() {
 
 // Close the modal
 const modal = document.querySelector('#modal');
+const modalOverlay = document.querySelector('#modal-overlay');
 const closeButton = document.querySelector('#close-btn');
 
-closeButton.addEventListener('click', () => modal.classList.toggle('open'));
+closeButton.addEventListener('click', () => {
+    modal.classList.toggle('open');
+    modalOverlay.classList.toggle('open');
+});
 const choices = document.querySelectorAll('.choice');
 const choicesArray = Array.from(choices);
 choicesArray.forEach((item) =>
@@ -40,6 +44,7 @@ function play(playerChoice) {
     const finalWinner = decideWinner(playerChoice, computerChoice);
     displayWinner(finalWinner, computerChoice);
     modal.classList.toggle('open');
+    modalOverlay.classList.toggle('open');
     displayScoreboard();
 }
 
