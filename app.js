@@ -12,15 +12,18 @@ function displayScoreboard() {
     `;
 }
 
-// Close the modal
+// Modal
 const modal = document.querySelector('#modal');
 const modalOverlay = document.querySelector('#modal-overlay');
 const closeButton = document.querySelector('#close-btn');
 
+// Close the modal
 closeButton.addEventListener('click', () => {
     modal.classList.toggle('open');
     modalOverlay.classList.toggle('open');
 });
+
+// Choices
 const choices = document.querySelectorAll('.choice');
 const choicesArray = Array.from(choices);
 choicesArray.forEach((item) =>
@@ -94,3 +97,11 @@ function getRandomInt() {
     let max = 3; //Choices : 0, 1, 2
     return Math.floor(Math.random() * Math.floor(max));
 }
+
+// Reset Scoreboard
+const reset = document.querySelector('#reset-btn');
+reset.addEventListener('click', () => {
+    scoreboard.player = 0;
+    scoreboard.computer = 0;
+    displayScoreboard();
+});
