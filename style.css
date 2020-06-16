@@ -94,12 +94,12 @@ body {
     display: block;
 }
 
-#close-btn {
+.btn {
     background: black;
     color: white;
     font-family: inherit;
     font-size: 100%;
-    border: none;
+    border: 2px solid white;
     line-height: 1.15;
     margin-top: 70px;
     overflow: visible;
@@ -107,7 +107,7 @@ body {
     border-radius: 5px;
 }
 
-#close-btn:hover {
+.btn:hover {
     border: 2px solid aqua;
 }
 
